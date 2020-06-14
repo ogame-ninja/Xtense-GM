@@ -13,7 +13,8 @@
   "content_scripts": [
     {
       "matches": [
-        "https://*.ogame.gameforge.com/game/*"
+        "https://*/*",
+        "http://*/*"
       ],
       "js": [
         "contribs/jquery.min.js",

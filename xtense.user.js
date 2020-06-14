@@ -40,9 +40,9 @@ if (isFirefox) {
 
 const url = location.href;
 // Adresse en cours sur la barre d'outils
-const urlUnivers = url.match(new RegExp('(.*)/game'))[1];
-const numUnivers = urlUnivers.match(new RegExp('\/s(.*)-[a-z]{2}.ogame'))[1];
-const langUnivers = urlUnivers.match(new RegExp('-(.*).ogame'))[1];
+const numUnivers  = url.match(new RegExp('.*/bots/\\d+/browser/html/s(.*)-([a-z]{2})'))[1];
+const langUnivers = url.match(new RegExp('.*/bots/\\d+/browser/html/s(.*)-([a-z]{2})'))[2];
+const urlUnivers = "https://s"+numUnivers+"-"+langUnivers+".ogame.gameforge.com";
 const prefix_GMData = langUnivers + numUnivers + '.';
 log("Universe Number: " + numUnivers);
 log("Universe language: " + langUnivers);
